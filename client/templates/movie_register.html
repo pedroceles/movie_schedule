@@ -1,0 +1,43 @@
+<div ng-controller="MovieRegisterCtrl">
+	<form name="colorForm" ng-submit="search(movieName)">
+		<div layout="row" layout-align="center" layout-margin>
+			<div flex="70">
+				<md-autocomplete md-floating-label="Título do Filme" md-items="movie in search(movieData.title)" md-search-text="movieData.title" md-delay="150" md-item-text="movie.title" md-selected-item-change="movieWasSelected(selectedMovie)" md-selected-item="selectedMovie">
+					<md-item-template>
+						<div layout="row">
+							<div flex="20"><img ng-src="{{getImgUrl(movie)}}" alt=""/></div>
+							<div flex="80">{{movie.title}}</div>
+						</div>
+					</md-item-template>
+				</md-autocomplete>
+			</div>
+			<!-- <md&#45;input&#45;container> -->
+			<!-- 	<label>Título do Filme</label> -->
+			<!-- 	<input ng&#45;model="movieName" required> -->
+			<!-- 	<div ng&#45;messages="colorForm.favoriteColor.$error"> -->
+			<!-- 		<div ng&#45;message="required">This is required!</div> -->
+			<!-- 	</div> -->
+			<!-- </md&#45;input&#45;container> -->
+			<!-- <md&#45;button type="submit">Search</md&#45;button> -->
+		</div>
+		<div layout="row" layout-align="center" layout-margin>
+			<div flex="70">
+				<div layout="row">
+					<div flex=33>
+						<md-input-container>
+							<label>Duração (min)</label>
+							<input type="number" ng-model="movieData.runtime"/>
+						</md-input-container>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<div layout="column" layout-align="center">
+		<div ng-repeat="movie in movies" flex>
+			<span ng-bind="movie.title"></span>
+		</div>
+	</div>
+</div>

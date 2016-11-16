@@ -1,0 +1,22 @@
+{
+  "name": "movie",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Pedro Celes <pedro.celes123@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/pedroceles/movie_schedule",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.1.1",
+    "angular": "^1.5.8",
+    "themoviedb-javascript-library": "git@github.com:cavestri/themoviedb-javascript-library.git#^1.0.0"
+  }
+}
